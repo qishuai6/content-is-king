@@ -1,6 +1,8 @@
 # Content Is King
 
-`Content Is King` is a Codex skill that turns the article's method into one reusable workflow with three capabilities inside a single skill:
+`Content Is King` is a Codex skill for story-first content creation.
+
+It turns the article's method into one reusable workflow with three capabilities inside a single skill:
 
 - Information Gathering
 - Angle Design
@@ -8,6 +10,21 @@
 
 The skill is based on the article:
 - [The Viral Playbook](https://www.uisdc.com/the-viral-playbook)
+
+Chinese README: [README.zh-CN.md](./README.zh-CN.md)
+
+## Why This Exists
+
+Most content systems are good at summarizing information and bad at making content feel worth reading or sharing.
+
+This skill is built around a stricter assumption:
+
+- raw information is not content
+- the angle matters more than the first draft
+- better inputs create better angles
+- rhythm is part of the value, not just decoration
+
+The goal is to help Codex produce content that feels more like a real point of view and less like organized notes.
 
 ## What This Skill Does
 
@@ -18,6 +35,17 @@ Instead of stopping at information summary, it pushes the work through a story-f
 1. Gather better material
 2. Find a stronger angle
 3. Create content with rhythm
+
+## Who This Is For
+
+This skill is useful when you are:
+
+- building a topic bank
+- planning articles or video scripts
+- rewriting flat drafts
+- improving hooks and titles
+- turning niche information into broader story-driven content
+- working in Chinese content workflows but still wanting a clean Codex skill structure
 
 ## Three Capabilities
 
@@ -52,11 +80,34 @@ Outputs can include:
 - longform articles
 - scripts
 
-## Files
+## Workflow Logic
 
-- `SKILL.md`: main skill instructions
-- `agents/openai.yaml`: UI metadata for Codex
-- `references/content-is-king-core.md`: distilled method and review checklist
+This skill can run in two modes:
+
+### Single-step mode
+
+Use only one capability when the user asks for one specific task, such as:
+- only gather materials
+- only find angles
+- only rewrite a draft
+
+### Full-workflow mode
+
+Run the three capabilities in order when the user wants end-to-end help:
+
+1. widen the input field
+2. select the strongest angle
+3. write with narrative movement
+
+## Example Prompts
+
+```text
+Use $content-is-king to gather material for this topic before writing.
+Use $content-is-king to give me 5 stronger angles for this idea.
+Use $content-is-king to turn this topic into a complete article.
+Use $content-is-king to rewrite this draft with better rhythm and narrative movement.
+Use $content-is-king to run the full workflow from material gathering to final draft.
+```
 
 ## Installation
 
@@ -66,16 +117,32 @@ If you want Codex to discover this skill automatically, place it under:
 ~/.codex/skills/content-is-king
 ```
 
+If you are installing from this repository manually:
+
+```bash
+ln -s /absolute/path/to/content-is-king ~/.codex/skills/content-is-king
+```
+
 On this machine it is already linked there.
 
-## Example Prompts
+## Repository Structure
 
 ```text
-Use $content-is-king to gather material for this topic before writing.
-Use $content-is-king to give me 5 stronger angles for this idea.
-Use $content-is-king to turn this topic into a complete article.
-Use $content-is-king to rewrite this draft with better rhythm and narrative movement.
+content-is-king/
+├── SKILL.md
+├── README.md
+├── README.zh-CN.md
+├── agents/
+│   └── openai.yaml
+└── references/
+    └── content-is-king-core.md
 ```
+
+## Files
+
+- `SKILL.md`: main skill instructions
+- `agents/openai.yaml`: UI metadata for Codex
+- `references/content-is-king-core.md`: distilled method and review checklist
 
 ## Design Principles
 
@@ -85,8 +152,18 @@ Use $content-is-king to rewrite this draft with better rhythm and narrative move
 - Build drafts with rising beats
 - Keep the value stance grounded and trustworthy
 
-## Language
+## Output Style
 
-The current skill body is written in English with Chinese capability labels where they improve direct usability for Chinese content work.
+By default, the skill tries to produce:
+
+- clearer narrative tension
+- more defensible but less obvious angles
+- stronger movement from opening to ending
+- more usable artifacts such as angle lists, outlines, scripts, and rewrites
+
+## Notes
+
+- The current skill body is written in English with Chinese capability labels where they improve direct usability for Chinese content work.
+- The repository focuses on the skill itself, not a broader template, plugin, or content framework.
 
 For the Chinese README, see [README.zh-CN.md](./README.zh-CN.md).
