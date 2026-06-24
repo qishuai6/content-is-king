@@ -99,6 +99,16 @@ Run the three capabilities in order when the user wants end-to-end help:
 2. select the strongest angle
 3. write with narrative movement
 
+## Workflow Diagram
+
+```mermaid
+flowchart LR
+    A["Raw Input\nTopic, link, note, draft, trend"] --> B["Information Gathering\nExpand sources, audience tension, proof points"]
+    B --> C["Angle Design\nReject first take, generate alternatives, choose strongest angle"]
+    C --> D["Content Creation\nOutline, draft, rewrite, script"]
+    D --> E["Quality Check\nFresh angle, narrative movement, trustworthy value"]
+```
+
 ## Example Prompts
 
 ```text
