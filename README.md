@@ -130,6 +130,7 @@ On this machine it is already linked there.
 ```text
 content-is-king/
 ├── SKILL.md
+├── LICENSE
 ├── README.md
 ├── README.zh-CN.md
 ├── agents/
@@ -165,5 +166,9 @@ By default, the skill tries to produce:
 
 - The current skill body is written in English with Chinese capability labels where they improve direct usability for Chinese content work.
 - The repository focuses on the skill itself, not a broader template, plugin, or content framework.
+
+## License
+
+This project is released under the [MIT License](./LICENSE).
 
 For the Chinese README, see [README.zh-CN.md](./README.zh-CN.md).
