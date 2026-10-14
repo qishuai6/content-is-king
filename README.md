@@ -182,3 +182,8 @@ By default, the skill tries to produce:
 This project is released under the [MIT License](./LICENSE).
 
 For the Chinese README, see [README.zh-CN.md](./README.zh-CN.md).
+
+## 更新日志
+
+- **2026-06-24** README 加入工作流图，新增 MIT License 与仓库元数据，扩充开源说明。
+- **2026-06-24** 项目发布：content-is-king Codex skill（story-first 内容创作：信息收集 → 角度设计 → 内容产出）。
